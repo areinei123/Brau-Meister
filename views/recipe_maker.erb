@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Maker</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+
+  <body>
+    <h1>Recipe Maker</h1>
+    <h3>Start Adding Ingredients to Your Recipe!
+        You can add grains, hops, and a yeast.</h3>
+      <form action="/RecipeMaker" method="post">
+        <label for="ingredient">Ingredient:</label>
+        <input type="text" id="ingredient" name="ingredient">
+
+        <label for="weight">Weight Value:</label>
+        <input type="text" id="weight" name="weight">
+
+        <input type="submit">
+
+        <p>For Weight Values, please specify lbs. or oz. after the number</p>
+      </form>
+
+      <h3>Here's our shopping list!</h3>
+      <h5>Don't forget to check this when you get supplies.</h5>
+        <ul>
+          <%recipe_array.each do |value|%>
+            <li>
+              <%=recipe_array[0]%> <%=recipe_array[1]%>
+            </li>
+          <%end%>
+        </ul>
+  </body>
+</html>
