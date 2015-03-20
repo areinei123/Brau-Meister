@@ -9,10 +9,20 @@
 
   <body>
     <div class="header">
-      <h3> Welcome to Brau Meister </h3>
-      <a href = "/">Log in</a>
+      <div class="title">Welcome to Brau Meister</div>
+      <% if !user_signed_in? %>
+        <div class="login">You are not currently signed in.
 
+        <a href="/sign_in">Click here to sign in</a>
+      <% else %>
+        You are currently signed in as <%= current_user %>.
+
+        <a href="/sign_out">Sign out</a>
+        </div>
+      <% end %>
+    </div>
     <div class="links">
+      <p></p>
       <p><a href = "/RecipeMaker">Recipe Maker</a> -- Create a Recipe </p>
       <p><a href = "/BrewDay">Brew Day</a> -- Ready to Brew? Let's go!</p>
       <p><a href = "/BrewTracker">Brew Tracker</a> -- Ferment and forget.</p>

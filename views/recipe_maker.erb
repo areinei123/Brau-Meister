@@ -9,18 +9,58 @@
     <h1>Recipe Maker</h1>
     <h3>Start Adding Ingredients to Your Recipe!
         You can add grains, hops, and a yeast.</h3>
-      <form action="/RecipeMaker" method="post">
-        <label for="ingredient">Ingredient:</label>
-        <input type="text" id="ingredient" name="ingredient">
-
-        <label for="weight">Weight Value:</label>
-        <input type="text" id="weight" name="weight">
-
-        <input type="submit">
-
-        <p>For Weight Values, please specify lbs. or oz. after the number</p>
-      </form>
-
+      <div class="grains">
+        Base malts:
+        <select>
+          <option value="2-row">2-Row</option>
+          <option value="6-row">6-Row</option>
+          <option value="pilsner">Pilsner</option>
+          <option value="maris_otter">Maris Otter</option>
+          <option value="golden_promise">Golden Promise</option>
+          <option value="pearl">Pearl</option>
+          <option value="pale">Pale</option>
+          <option value="munich">Munich</option>
+          <option value="vienna">Vienna</option>
+        </select>
+        Specialty grains:
+        <select>
+          <option value="smoked">Smoked Malt</option>
+          <option value="aromatic">Aromatic Malt</option>
+          <option value="caramel">Caramel Malt</option>
+          <option value="brown">Brown Malt</option>
+          <option value="chocolate">Chocolate Malt</option>
+        </select>
+        Adjuncts:
+        <select>
+          <option value="wheat">Wheat</option>
+          <option value="rye">Rye</option>
+          <option value="oat">Malted Oat</option>
+        </select>
+        Hops
+        <select>
+          <option value="amarillo">Amarillo</option>
+          <option value="apollo">Apollo</option>
+          <option value="cascade">Cascade</option>
+          <option value="chinook">Chinook</option>
+          <option value="citra">Citra</option>
+          <option value="cluster">Cluster</option>
+          <option value="crystal">Crystal</option>
+          <option value="galena">Galena</option>
+          <option value="mosaic">Mosaic</option>
+        </select>
+        Yeast
+        <select>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </div>
       <h3>Here's our shopping list!</h3>
       <h5>Don't forget to check this when you get supplies.</h5>
         <ul>

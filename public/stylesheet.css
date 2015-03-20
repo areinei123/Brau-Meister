@@ -3,10 +3,22 @@ body {
 }
 
 .header {
-  text-align:center;
-  
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 6%;
 }
 
+.title {
+  display:inline-block;
+  padding-left:4%;
+  padding-right:4%;
+  text-align:left;
+}
+
+.login {
+  display:inline-block;
+  text-align:right;
+}
 .links{
   text-align:center
 }

@@ -1,8 +1,34 @@
-DROP TABLE IF EXISTS; #variable
+DROP TABLE recipes IF EXISTS; #variable
 
-CREATE TABLE  #variable
+CREATE TABLE  recipes
 (
-  item type varchar (255),
-  ingredient varchar (255),
-  weight varchar (255)
+  recipe_name varchar (100),
+  grain_id integer REFERENCES grains(id),
+  hop_id integer REFERENCES hops(id),
+  yeast_id integer REFERENCES yeast(id)
+);
+
+CREATE TABLE grains
+(
+  grain_name varchar (255),
+  grain_weight float,
+  id SERIAL primary key
+);
+
+CREATE TABLE hops
+(
+  hop_name varchar (255),
+  hop_weight varchar (255)
+  id SERIAL primary key
+);
+
+CREATE TABLE yeast
+(
+  yeast_name varchar
+  id SERIAL primary key
+);
+
+CREATE TABLE instructions
+(
+  step text
 );
